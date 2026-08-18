@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+.DS_Store
+# Synthesiser output, fully regenerable from data/benchmark/real/ + seeds
+data/benchmark/synthetic_*/
+# Simulated Y for inference panel — now generated on the fly
+data/benchmark/real_simulatedY/
+# Intermediate results (regenerable from raw data by analysis scripts)
+source_data/
+code/figure1/*.csv
+code/figure2/*.json
+code/table1/*.json
+code/table1/*.csv
+# Output figures (regenerable by render scripts)
+figures/
+# NHANES data (regenerable by analyze.py)
+data/nhanes_*.csv
+data/nhanes_cache/
+# Table 1 raw caches: ImageNet-100 features (~1 GB), PTB waveforms, GTR
+# embeddings. Regenerable from the public sources by steps 1-3.
+data/table1/
+code/table1/_runlog/
+# Not distributed: SPHERE core (macOS app / sphere-cli)
+code/sphere.py
+code/figure2_virtuallab.py

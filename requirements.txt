@@ -1,0 +1,47 @@
+# SPHERE — Python dependencies
+#
+# Python 3.11. The core group is sufficient to redraw every figure from the
+# pre-computed tables. Additional groups are needed only to regenerate
+# those tables from raw data.
+#
+#   pip install -r requirements.txt
+
+# ── Core ────────────────────────────────────────────────────────────────────
+numpy==1.26.4
+pandas==2.3.3
+matplotlib==3.10.8
+scipy==1.17.1
+scikit-learn==1.9.0
+
+# ── Privacy (Anonymeter) ────────────────────────────────────────────────────
+# Requires a separate Python 3.11 virtualenv.
+anonymeter==1.0.0
+
+# ── ADRC figure (figure4) ───────────────────────────────────────────────────
+polars>=0.20
+
+# ── Figure 1 deep-generative baselines ──────────────────────────────────────
+ctgan==0.12.1
+sdv==1.37.2
+rdt==1.21.0
+
+# ── Figure 3/5 survival analysis ────────────────────────────────────────────
+lifelines==0.30.3
+
+# ── Figure 2 (AI meetings require an Anthropic API key) ─────────────────────
+anthropic>=0.30
+requests>=2.31
+
+# ── Deep-learning experiments (Table 1 steps 4–6, Figure 1 TabDDPM) ─────────
+torch==2.12.1
+torchvision==0.27.1
+datasets==5.0.0
+Pillow==12.2.0
+
+# ── Table 1 step 3 (PhysioNet ECG) ─────────────────────────────────────────
+wfdb>=4.1
+
+# ── Table 1 step 1 (text embeddings, separate venv) ────────────────────────
+# vec2text==0.0.13
+# transformers==4.44.2
+# sentence-transformers==5.6.0
